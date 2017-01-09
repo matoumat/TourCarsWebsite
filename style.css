@@ -1,0 +1,74 @@
+body {
+    font-family: Tahoma;
+    color: #000;
+}
+
+div#content {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    margin-bottom: 1em;
+}
+
+.row > *:not(:first-child) {
+    margin-left: 0.8em;
+}
+
+.middle-centered {
+	text-align: center;
+}
+
+.f1 {
+    flex-grow: 1;
+}
+
+.f2 {
+    flex-grow: 2;
+}
+
+h1 {
+	font-weight: 2em;
+}
+
+h2 {
+	font-weight: 1.3em;
+	font-weight: bold;
+	font-style: italic;
+}
+
+a {
+	color: #000;
+	text-decoration: underline;
+}
+
+.box {
+	padding: 2%;
+	border: 1px solid #000;
+}
+
+.box img {
+	width: 100%;
+}
+
+.box a.strong {
+	display: inline-block;
+	font-size: 6vw;
+	text-transform: uppercase;
+	text-align: center;
+	margin: 0 0 0.3em 0;
+	padding: 0 auto;
+}
+
+ul {
+	padding: 0;
+	list-style-position: inside;
+}
+
+ul.inline li {
+	display: inline;
+}

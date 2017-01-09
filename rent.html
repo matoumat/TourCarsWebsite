@@ -1,9 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>TourCars - car renting and city tours by autonomous cars</title>
+<title>TourCars - Rent a car as an individual and make a trip by your own</title>
 <script type="text/javascript" src="gui.js"></script>
 <link rel="stylesheet" type="text/css" href="style.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script src="jquery.bxslider.min.js"></script>
+<link href="jquery.bxslider.css" rel="stylesheet" />
+<script type="text/javascript">
+$(document).ready(function(){
+  $('.bxslider').bxSlider({
+  	pager: false
+  });
+});
+</script>
 </head>
 <body>
 <div id="content">
@@ -11,28 +21,18 @@
 		<h1 class="f1 middle-centered">TourCars</h1>
 	</div>
 	<div class="row">
-		<h2 class="f1">Welcome!</h2>
+		<h2 class="f1">Rent a car</h2>
 	</div>
 	<div class="row">
-		<p class="f1 box">Info about our company and aim of the website.</p>
-	</div>
-	<div class="row">
-		<div class="f2 box">
-			<a href="rent.html" class="strong">Rent a car</a>
-			<img src="rent.png" title="Rent a car as an individual and make a trip by your own" alt="Rent a car as an individual and make a trip by your own" />
-		</div>
-		<div class="f2 box">
-			<a href="tour.html" class="strong">Join a city tour</a>
-			<img src="tour.png" title="Join a guided trip to various destinations" alt="Join a guided trip to various destinations" />
-		</div>
+		<p class="f1 box">General conditions and information (contract highlights, etc...)</p>
 	</div>
 	<div class="row">
 		<div class="f1 box">
 			<div class="row">
-				<h3 class="f1">Special offers:</h3>
+				<h3 class="f1">Choose your car</h3>
 			</div>
 			<div class="row">
-				<ul class="f1">
+				<ul class="f1 bxslider">
 					<li>Paris <span class="reduction">20%</span></li>
 					<li>Milan <span class="reduction">35%</span></li>
 					<li>Prague <span class="reduction">55%</span></li>
