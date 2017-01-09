@@ -10,7 +10,11 @@
 <script type="text/javascript">
 $(document).ready(function(){
   $('.bxslider').bxSlider({
-  	pager: false
+  	pager: false,
+  	nextSelector: '#slider-next',
+  	prevSelector: '#slider-prev',
+  	nextText: '',
+  	prevText: ''
   });
 });
 </script>
@@ -32,12 +36,21 @@ $(document).ready(function(){
 				<h3 class="f1">Choose your car</h3>
 			</div>
 			<div class="row">
-				<ul class="f1 bxslider">
-					<li>Paris <span class="reduction">20%</span></li>
-					<li>Milan <span class="reduction">35%</span></li>
-					<li>Prague <span class="reduction">55%</span></li>
-					<li>Tifilis <span class="reduction">5%</span></li>
-				</ul>
+				<div class="f1">
+					<div class="row">
+						<div class="f3">
+							<div id="slider-prev"></div>
+						</div>
+						<div class="f3">
+							<ul class="bxslider">
+								<li><img src="https://imgs.6sqft.com/wp-content/uploads/2014/11/21015957/ideo-self-driving-car-concept-5.jpg" /></li>
+							</ul>
+						</div>
+						<div class="f3">
+							<div id="slider-next"></div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

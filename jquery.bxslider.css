@@ -185,3 +185,29 @@ ul.bxslider {
   font-size: .85em;
   padding: 10px;
 }
+
+div#slider-next a, div#slider-prev a {
+  display: block;
+  width: 32px;
+  height: 32px;
+  text-indent: -9999px;
+  z-index: 9999;
+}
+
+div#slider-next a {
+  background: url(images/controls.png) no-repeat -43px -32px;
+}
+
+div#slider-prev a {
+  background: url(images/controls.png) no-repeat 0 -32px;
+}
+
+.slider-next a:hover,
+.slider-next a:focus {
+  background-position: -43px 0;
+}
+
+.slider-prev a:hover,
+.slider-prev a:focus {
+  background-position: 0 0;
+}
