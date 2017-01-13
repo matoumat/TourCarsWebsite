@@ -1,26 +1,34 @@
-Skip to content
-This repository
-Search
-Pull requests
-Issues
-Gist
- @Hischem
- Watch 1
-  Star 0
-  Fork 0 matoumat/TourCars
- Code  Issues 0  Pull requests 0  Projects 0  Wiki  Pulse  Graphs
-Branch: master Find file Copy pathTourCars/index.html
-b461e29  12 minutes ago
- Home first steps for new layout
-0 contributors
-RawBlameHistory     
-56 lines (56 sloc)  1.65 KB
 <!DOCTYPE html>
 <html>
 <head>
-<title>TourCars - car renting and city tours by autonomous cars</title>
-<script type="text/javascript" src="gui.js"></script>
+<title>TourCars - Join a tour and get guided trip withou anything to take care about</title>
+<!--<script type="text/javascript" src="gui.js"></script>-->
 <link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="slippry.min.js"></script>
+<link rel="stylesheet" href="slippry.css" />
+<script type="text/javascript">
+$(document).ready(function(){
+  $('#slider-1').slippry({
+  	pager: false,
+  	auto: false,
+  	transition: 'horizontal'
+  });
+});
+
+$(document).ready(function(){
+  $('#slider-2').slippry({
+  	pager: false,
+  	auto: false,
+  	transition: 'horizontal'
+  });
+});
+$(document).ready(function(){
+  $('.datepicker').datepicker();
+});
+</script>
 </head>
 <body>
 <div id="content">
@@ -28,33 +36,241 @@ RawBlameHistory
 		<h1 class="f1 middle-centered">TourCars</h1>
 	</div>
 	<div class="row">
-		<h2 class="f1">Welcome!</h2>
+		<h2 class="f1">Join a tour</h2>
 	</div>
 	<div class="row">
-		<p class="f1 box">Info about our company and aim of the website.</p>
-	</div>
-	<div class="row">
-		<div class="f2 box">
-			<a href="rent.html" class="strong">Rent a car</a>
-			<img src="rent.png" title="Rent a car as an individual and make a trip by your own" alt="Rent a car as an individual and make a trip by your own" />
-		</div>
-		<div class="f2 box">
-			<a href="tour.html" class="strong">Join a city tour</a>
-			<img src="tour.png" title="Join a guided trip to various destinations" alt="Join a guided trip to various destinations" />
-		</div>
+		<p class="f1 box">General conditions and information (contract highlights, etc...)</p>
 	</div>
 	<div class="row">
 		<div class="f1 box">
 			<div class="row">
-				<h3 class="f1">Special offers:</h3>
+				<h3 class="f1">Choose appropriate vehicle</h3>
 			</div>
 			<div class="row">
-				<ul class="f1">
-					<li>Paris <span class="reduction">20%</span></li>
-					<li>Milan <span class="reduction">35%</span></li>
-					<li>Prague <span class="reduction">55%</span></li>
-					<li>Tifilis <span class="reduction">5%</span></li>
-				</ul>
+				<div class="f1 fixed">
+					<ul id="slider-1">
+						<li>
+							<div class="row">
+								<div class="f1">
+									<img src="bus.jpg" alt="" title="" />
+								</div>
+							</div>
+							<div class="row">
+								<div class="f2 fixed">
+									<h4>Bus</h4>
+								</div>
+								<div class="f2 fixed">
+									<p>Price: <span id="price-1">50</span>€/trip</p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="f2 fixed">
+									<p>Number of seats</p>
+								</div>
+								<div class="f2 fixed">
+									<p>30</p>
+								</div>
+							</div>
+						</li>
+
+						<li>
+							<div class="row">
+								<div class="f1">
+									<img src="microbus.jpg" alt="" title="" />
+								</div>
+							</div>
+							<div class="row">
+								<div class="f2 fixed">
+									<h4>Micro Bus</h4>
+								</div>
+								<div class="f2 fixed">
+									<p>Price: <span id="price-2">70</span>€/trip</p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="f2 fixed">
+									<p>Number of seats</p>
+								</div>
+								<div class="f2 fixed">
+									<p>15</p>
+								</div>
+							</div>
+						</li>
+
+						<li>
+							<div class="row">
+								<div class="f1">
+									<img src="mpv.jpg" alt="" title="" />
+								</div>
+							</div>
+							<div class="row">
+								<div class="f2 fixed">
+									<h4>MPV</h4>
+								</div>
+								<div class="f2 fixed">
+									<p>Price: <span id="price-3">100</span>€/trip</p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="f2 fixed">
+									<p>Number of seats</p>
+								</div>
+								<div class="f2 fixed">
+									<p>6</p>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<h3 class="f1">Choose your tourguide</h3>
+			</div>
+			<div class="row">
+				<div class="f1 fixed">
+					<ul id="slider-2">
+						<li>
+							<div class="row">
+								<div class="f1">
+									<img src="woman-1.jpg" alt="" title="" />
+								</div>
+							</div>
+							<div class="row">
+								<div class="f1">
+									<h4>Maria</h4>
+								</div>
+							</div>
+							<div class="row">
+								<div class="f2 fixed">
+									<p>Bio</p>
+								</div>
+								<div class="f2 fixed">
+									<p>Food enthusiast. Student. Tv practitioner. Incurable gamer. Travel scholar.</p>
+								</div>
+							</div>
+						</li>
+
+						<li>
+							<div class="row">
+								<div class="f1">
+									<img src="woman-2.jpg" alt="" title="" />
+								</div>
+							</div>
+							<div class="row">
+								<div class="f1">
+									<h4>Mareike</h4>
+								</div>
+							</div>
+							<div class="row">
+								<div class="f2 fixed">
+									<p>Bio</p>
+								</div>
+								<div class="f2 fixed">
+									<p>General traveler. Gamer. Twitter geek. Amateur music buff. Total pop culture scholar.</p>
+								</div>
+							</div>
+						</li>
+
+						<li>
+							<div class="row">
+								<div class="f1">
+									<img src="man-1.jpg" alt="" title="" />
+								</div>
+							</div>
+							<div class="row">
+								<div class="f1">
+									<h4>Janosch</h4>
+								</div>
+							</div>
+							<div class="row">
+								<div class="f2 fixed">
+									<p>Bio</p>
+								</div>
+								<div class="f2 fixed">
+									<p>Analyst. Problem solver. Infuriatingly humble problem solver. Bacon practitioner.</p>
+								</div>
+							</div>
+						</li>					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<div class="f1">
+					<div class="row">
+						<div class="f2 fixed">
+							<label for="from-city">From:</label>
+						</div>
+						<div class="f2 fixed">
+							<select id="from-city">
+								<option value="1">Berlin (Hbf)</option>
+								<option value="2">Hannover (Hbf)</option>
+								<option value="3">München</option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="f2 fixed">
+							<label for="to-city">To:</label>
+						</div>
+						<div class="f2 fixed">
+							<select id="to-city">
+								<option value="1">Berlin (Hbf)</option>
+								<option value="2">Hannover (Hbf)</option>
+								<option value="3">München</option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="f2 fixed">
+							<label for="pickup-date">Pick-up Date:</label>
+						</div>
+						<div class="f2 fixed">
+							<input id="pickup-date" class="datepicker" />
+						</div>
+					</div>
+					<div class="row">
+						<div class="f2 fixed">
+							<label for="dropoff-date">Drop-off Date:</label>
+						</div>
+						<div class="f2 fixed">
+							<input id="dropoff-date" class="datepicker" />
+						</div>
+					</div>
+					<div class="row">
+						<div class="f2 fixed">
+							<label for="firstname">First name:</label>
+						</div>
+						<div class="f2 fixed">
+							<input id="firstname" value="Peter" />
+						</div>
+					</div>
+					<div class="row">
+						<div class="f2 fixed">
+							<label for="surname">Surname:</label>
+						</div>
+						<div class="f2 fixed">
+							<input id="surname" value="Schneider" />
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row payment-methods">
+				<div class="f3">
+					<input type="radio" id="paypal" name="payment-method" />
+					<label for="paypal"><img src="paypal-logo.png" alt="" title="" /></label>
+				</div>
+				<div class="f3">
+					<input type="radio" id="visa" name="payment-method" />
+					<label for="visa"><img src="visa-logo.png" alt="" title="" /></label>
+				</div>
+				<div class="f3">
+					<input type="radio" id="mastercard" name="payment-method" />
+					<label for="mastercard"><img src="mastercard-logo.png" alt="" title="" /></label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="f1 fixed">
+					<input type="submit" id="next-button" style="float: right; width: 10em;" value="Next" />
+				</div>
 			</div>
 		</div>
 	</div>
@@ -71,5 +287,3 @@ RawBlameHistory
 </div>
 </body>
 </html>
-Contact GitHub API Training Shop Blog About
-© 2017 GitHub, Inc. Terms Privacy Security Status Help

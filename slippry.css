@@ -104,7 +104,7 @@
   display: block;
   position: absolute;
   width: 100%;
-  z-index: 2; }
+  /*z-index: 2;*/ }
   .sy-slide.kenburns {
     width: 140%;
     left: -20%; }
@@ -127,7 +127,7 @@
              -o-animation-fill-mode: forwards;
                 animation-fill-mode: forwards; }
   .sy-slide.sy-active {
-    z-index: 3; }
+    /*z-index: 3;*/ }
   .sy-slide > img {
     margin: 0;
     padding: 0;

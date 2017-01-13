@@ -4,7 +4,9 @@
 <title>TourCars - Rent a car as an individual and make a trip by your own</title>
 <!--<script type="text/javascript" src="gui.js"></script>-->
 <link rel="stylesheet" type="text/css" href="style.css">
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="slippry.min.js"></script>
 <link rel="stylesheet" href="slippry.css" />
 <script type="text/javascript">
@@ -14,6 +16,9 @@ $(document).ready(function(){
   	auto: false,
   	transition: 'horizontal'
   });
+});
+$(document).ready(function(){
+  $('.datepicker').datepicker();
 });
 </script>
 </head>
@@ -34,47 +39,202 @@ $(document).ready(function(){
 				<h3 class="f1">Choose your car</h3>
 			</div>
 			<div class="row">
+				<div class="f1 fixed">
+					<ul id="slider">
+						<li>
+							<div class="row">
+								<div class="f1">
+									<img src="autonomous-car-1.jpg" alt="" title="" />
+								</div>
+							</div>
+							<div class="row">
+								<div class="f2 fixed">
+									<h4>Info about car</h4>
+								</div>
+								<div class="f2 fixed">
+									<p>Price: <span id="price-1">100</span>€/day</p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="f2 fixed">
+									<label for="seats-1">Number of seats</label>
+								</div>
+								<div class="f2 fixed">
+									<select id="seats-1">
+										<option value="1">2 seats</option>
+										<option value="2">4 seats</option>
+										<option value="3">6 seats</option>
+									</select>
+								</div>
+							</div>
+							<div class="row">
+								<div class="f2 fixed">
+									<label for="engine-1">Engine</label>
+								</div>
+								<div class="f2 fixed">
+									<select id="engine-1">
+										<option value="1">Diesel 50kW</option>
+										<option value="2">Benzin 70kW</option>
+										<option value="3">Hybrid 40kW</option>
+									</select>
+								</div>
+							</div>
+						</li>
+
+						<li>
+							<div class="row">
+								<div class="f1">
+									<img src="autonomous-car-2.jpg" alt="" title="" />
+								</div>
+							</div>
+							<div class="row">
+								<div class="f2 fixed">
+									<h4>Info about car</h4>
+								</div>
+								<div class="f2 fixed">
+									<p>Price: <span id="price-2">200</span>€/day</p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="f2 fixed">
+									<label for="seats-2">Number of seats</label>
+								</div>
+								<div class="f2 fixed">
+									<select id="seats-2">
+										<option value="1">2 seats</option>
+									</select>
+								</div>
+							</div>
+							<div class="row">
+								<div class="f2 fixed">
+									<label for="engine-2">Engine</label>
+								</div>
+								<div class="f2 fixed">
+									<select id="engine-2">
+										<option value="1">Benzin 30kW</option>
+										<option value="2">Electric 30kW</option>
+									</select>
+								</div>
+							</div>
+						</li>
+
+						<li>
+							<div class="row">
+								<div class="f1">
+									<img src="autonomous-car-3.jpg" alt="" title="" />
+								</div>
+							</div>
+							<div class="row">
+								<div class="f2 fixed">
+									<h4>Info about car</h4>
+								</div>
+								<div class="f2 fixed">
+									<p>Price: <span id="price-3">300</span>€/day</p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="f2 fixed">
+									<label for="seats-3">Number of seats</label>
+								</div>
+								<div class="f2 fixed">
+									<select id="seats-3">
+										<option value="1">5 seats</option>
+									</select>
+								</div>
+							</div>
+							<div class="row">
+								<div class="f2 fixed">
+									<label for="engine-3">Engine</label>
+								</div>
+								<div class="f2 fixed">
+									<select id="engine-3">
+										<option value="1">Benzin 150kW</option>
+										<option value="2">Benzin 190kW</option>
+										<option value="3">Hybrid 120kW</option>
+									</select>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
 				<div class="f1">
 					<div class="row">
-							<ul id="slider">
-								<li>
-									<div class="row">
-										<div class="f1">
-											<img src="https://imgs.6sqft.com/wp-content/uploads/2014/11/21015957/ideo-self-driving-car-concept-5.jpg" />
-											<h4>Info about car</h4>
-										</div>
-									</div>
-									<div class="row">
-										<div class="f2">
-											<label for="seats-1">Number of seats</label>
-										</div>
-										<div class="f2">
-											<select id="seats-1">
-												<option value="1">2 seats</option>
-												<option value="2">4 seats</option>
-												<option value="3">6 seats</option>
-											</select>
-										</div>
-									</div>
-									<div class="row">
-										<div class="f2">
-											<label for="engine-1">Engine</label>
-										</div>
-										<div class="f2">
-											<select id="engine-1">
-												<option value="1">Diesel 50kW</option>
-												<option value="2">Benzin 70kW</option>
-												<option value="3">Hybrid 40kW</option>
-											</select>
-										</div>
-									</div>
-								</li>
-
-								<li><img src="https://imgs.6sqft.com/wp-content/uploads/2014/11/21015957/ideo-self-driving-car-concept-5.jpg" /></li>
-
-								<li><img src="https://imgs.6sqft.com/wp-content/uploads/2014/11/21015957/ideo-self-driving-car-concept-5.jpg" /></li>
-							</ul>
+						<div class="f2 fixed">
+							<label for="from-city">From:</label>
+						</div>
+						<div class="f2 fixed">
+							<select id="from-city">
+								<option value="1">Berlin (Hbf)</option>
+								<option value="2">Hannover (Hbf)</option>
+								<option value="3">München</option>
+							</select>
+						</div>
 					</div>
+					<div class="row">
+						<div class="f2 fixed">
+							<label for="to-city">To:</label>
+						</div>
+						<div class="f2 fixed">
+							<select id="to-city">
+								<option value="1">Berlin (Hbf)</option>
+								<option value="2">Hannover (Hbf)</option>
+								<option value="3">München</option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="f2 fixed">
+							<label for="pickup-date">Pick-up Date:</label>
+						</div>
+						<div class="f2 fixed">
+							<input id="pickup-date" class="datepicker" />
+						</div>
+					</div>
+					<div class="row">
+						<div class="f2 fixed">
+							<label for="dropoff-date">Drop-off Date:</label>
+						</div>
+						<div class="f2 fixed">
+							<input id="dropoff-date" class="datepicker" />
+						</div>
+					</div>
+					<div class="row">
+						<div class="f2 fixed">
+							<label for="firstname">First name:</label>
+						</div>
+						<div class="f2 fixed">
+							<input id="firstname" value="Peter" />
+						</div>
+					</div>
+					<div class="row">
+						<div class="f2 fixed">
+							<label for="surname">Surname:</label>
+						</div>
+						<div class="f2 fixed">
+							<input id="surname" value="Schneider" />
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row payment-methods">
+				<div class="f3">
+					<input type="radio" id="paypal" name="payment-method" />
+					<label for="paypal"><img src="paypal-logo.png" alt="" title="" /></label>
+				</div>
+				<div class="f3">
+					<input type="radio" id="visa" name="payment-method" />
+					<label for="visa"><img src="visa-logo.png" alt="" title="" /></label>
+				</div>
+				<div class="f3">
+					<input type="radio" id="mastercard" name="payment-method" />
+					<label for="mastercard"><img src="mastercard-logo.png" alt="" title="" /></label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="f1 fixed">
+					<input type="submit" id="next-button" style="float: right; width: 10em;" value="Next" />
 				</div>
 			</div>
 		</div>

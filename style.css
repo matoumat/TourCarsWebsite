@@ -16,7 +16,7 @@ div#content {
 }
 
 .row > *:not(:first-child) {
-    margin-left: 0.8em;
+    margin-left: 2%;
 }
 
 .middle-centered {
@@ -27,8 +27,16 @@ div#content {
     flex-grow: 1;
 }
 
+.f1.fixed {
+	width: 100%;
+}
+
 .f2 {
     flex-grow: 2;
+}
+
+.f2.fixed {
+	width: 49%;
 }
 
 h1 {
@@ -76,4 +84,16 @@ ul.inline li {
 ul.bxslider li img{
 	display: block;
 	margin: auto;
+}
+
+.payment-methods label {
+	cursor: pointer;
+}
+
+.payment-methods input:checked+label img {
+	border: 2px solid #000;
+}
+
+.payment-methods input {
+	display: none;
 }
