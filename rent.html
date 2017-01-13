@@ -2,19 +2,17 @@
 <html>
 <head>
 <title>TourCars - Rent a car as an individual and make a trip by your own</title>
-<script type="text/javascript" src="gui.js"></script>
+<!--<script type="text/javascript" src="gui.js"></script>-->
 <link rel="stylesheet" type="text/css" href="style.css">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-<script src="jquery.bxslider.min.js"></script>
-<link href="jquery.bxslider.css" rel="stylesheet" />
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="slippry.min.js"></script>
+<link rel="stylesheet" href="slippry.css" />
 <script type="text/javascript">
 $(document).ready(function(){
-  $('.bxslider').bxSlider({
+  $('#slider').slippry({
   	pager: false,
-  	nextSelector: '#slider-next',
-  	prevSelector: '#slider-prev',
-  	nextText: '',
-  	prevText: ''
+  	auto: false,
+  	transition: 'horizontal'
   });
 });
 </script>
@@ -38,17 +36,44 @@ $(document).ready(function(){
 			<div class="row">
 				<div class="f1">
 					<div class="row">
-						<div class="f3">
-							<div id="slider-prev"></div>
-						</div>
-						<div class="f3">
-							<ul class="bxslider">
+							<ul id="slider">
+								<li>
+									<div class="row">
+										<div class="f1">
+											<img src="https://imgs.6sqft.com/wp-content/uploads/2014/11/21015957/ideo-self-driving-car-concept-5.jpg" />
+											<h4>Info about car</h4>
+										</div>
+									</div>
+									<div class="row">
+										<div class="f2">
+											<label for="seats-1">Number of seats</label>
+										</div>
+										<div class="f2">
+											<select id="seats-1">
+												<option value="1">2 seats</option>
+												<option value="2">4 seats</option>
+												<option value="3">6 seats</option>
+											</select>
+										</div>
+									</div>
+									<div class="row">
+										<div class="f2">
+											<label for="engine-1">Engine</label>
+										</div>
+										<div class="f2">
+											<select id="engine-1">
+												<option value="1">Diesel 50kW</option>
+												<option value="2">Benzin 70kW</option>
+												<option value="3">Hybrid 40kW</option>
+											</select>
+										</div>
+									</div>
+								</li>
+
+								<li><img src="https://imgs.6sqft.com/wp-content/uploads/2014/11/21015957/ideo-self-driving-car-concept-5.jpg" /></li>
+
 								<li><img src="https://imgs.6sqft.com/wp-content/uploads/2014/11/21015957/ideo-self-driving-car-concept-5.jpg" /></li>
 							</ul>
-						</div>
-						<div class="f3">
-							<div id="slider-next"></div>
-						</div>
 					</div>
 				</div>
 			</div>

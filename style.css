@@ -72,3 +72,8 @@ ul {
 ul.inline li {
 	display: inline;
 }
+
+ul.bxslider li img{
+	display: block;
+	margin: auto;
+}
