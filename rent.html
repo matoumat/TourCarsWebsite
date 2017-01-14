@@ -2,11 +2,11 @@
 <html>
 <head>
 <title>TourCars - Rent a car as an individual and make a trip by your own</title>
-<!--<script type="text/javascript" src="gui.js"></script>-->
 <link rel="stylesheet" type="text/css" href="style.css">
 <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script type="text/javascript" src="gui.js"></script>
 <script src="slippry.min.js"></script>
 <link rel="stylesheet" href="slippry.css" />
 <script type="text/javascript">
@@ -19,6 +19,10 @@ $(document).ready(function(){
 	$('.datepicker').datepicker();
 	$('#menu-toggler').click(function() {
 		$('#menu').toggleClass('active');
+	});
+	$('.datepicker').click(function() {
+		console.log('happened');
+		$('#ui-datepicker-div').css('z-index',99);
 	});
 });
 </script>
@@ -200,7 +204,7 @@ $(document).ready(function(){
 							<label for="pickup-date">Pick-up Date:</label>
 						</div>
 						<div class="f2 fixed">
-							<input id="pickup-date" class="datepicker" />
+							<input id="pickup-date" class="datepicker" placeholder="01/06/2017" />
 						</div>
 					</div>
 					<div class="row">
@@ -208,7 +212,7 @@ $(document).ready(function(){
 							<label for="dropoff-date">Drop-off Date:</label>
 						</div>
 						<div class="f2 fixed">
-							<input id="dropoff-date" class="datepicker" />
+							<input id="dropoff-date" class="datepicker" placeholder="07/06/2017" />
 						</div>
 					</div>
 					<div class="row">
@@ -216,7 +220,7 @@ $(document).ready(function(){
 							<label for="firstname">First name:</label>
 						</div>
 						<div class="f2 fixed">
-							<input id="firstname" value="Peter" />
+							<input id="firstname" placeholder="Peter" />
 						</div>
 					</div>
 					<div class="row">
@@ -224,7 +228,7 @@ $(document).ready(function(){
 							<label for="surname">Surname:</label>
 						</div>
 						<div class="f2 fixed">
-							<input id="surname" value="Schneider" />
+							<input id="surname" placeholder="Schneider" />
 						</div>
 					</div>
 				</div>

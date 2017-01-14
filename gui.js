@@ -52,6 +52,18 @@ function get(variable) {
 	request.send();
 }
 
+function put(response, message) {
+	request.open("PUT", dburl + response._id, false);
+	request.setRequestHeader("Content-type", "application/json");
+	message["_id"] = response._id;
+	if (response._rev) {
+		message["_rev"] = response._rev;
+	}
+	var s = JSON.stringify(message);
+	// console.log("put: " + s);
+	request.send(s);
+}
+
 function update() {
 	for (var name in handlers) {
 		// console.log("updating " + name);
@@ -68,10 +80,10 @@ var intervalID = setInterval(update, 200);
 var dbname = "hci1";
 var dburl = "http://127.0.0.1:5984/" + dbname + "/";
 var handlers = {
-	"animal" : updateAnimal,
-	"showCounter" : showCounter,
-	"counter" : updateCounter,
-	"mytext" : updateText,
+	"innerText" : updateInnerText,
+	"valueAttribute" : updateValueAttribute,
+	"page" : updatePage,
+	"popup" : updatePopup
 	// add further handlers here
 };
 
@@ -91,9 +103,28 @@ function showCounter(response) {
 	showCounter = response.checked;
 }
 
-function updateText(response) {
-	document.getElementById("mytext").innerHTML = response.value;
+function updateInnerText(response) {
+	if ((document.getElementById(response.elid) != null) && (document.getElementById(response.elid)!='')) {
+		document.getElementById(response.elid).innerHTML = response.value;
+	}
 }
 
+function updateValueAttribute(response) {
+	if ((document.getElementById(response.elid) != null) && (document.getElementById(response.elid)!='')) {
+		document.getElementById(response.elid).value = response.value;
+	}
+}
 
+function updatePage(response) {
+	if (!response.received) {
+		put(response, {'received' : true});
+		$(location).attr('href', response.value);
+	}
+}
 
+function updatePopup(response) {
+	if ((response.value !== "") && (!response.received)) {
+		$(response.value).dialog();
+		put(response, {'received' : true});
+	}
+}
