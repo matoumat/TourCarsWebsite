@@ -39,6 +39,26 @@ div#content {
 	width: 49%;
 }
 
+.f3 {
+    flex-grow: 3;
+}
+
+.f3.fixed {
+	width: 32%;
+}
+
+.f4 {
+    flex-grow: 4;
+}
+
+.f4.fixed {
+	width: 22%;
+}
+
+.f1 *, .f2 *, .f3 *, .f4 * {
+	max-width: 100%;
+}
+
 h1 {
 	font-weight: 2em;
 }
@@ -60,7 +80,7 @@ a {
 }
 
 .box img {
-	width: 100%;
+	max-width: 100%;
 }
 
 .box a.strong {
@@ -96,4 +116,11 @@ ul.bxslider li img{
 
 .payment-methods input {
 	display: none;
+}
+
+a.more {
+	float: right;
+	text-decoration: none;
+	padding: 0.5em 1em;
+	border: 1px solid #c00;
 }
