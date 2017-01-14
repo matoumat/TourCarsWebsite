@@ -4,11 +4,29 @@
 <title>TourCars - Pay with MasterCard</title>
 <!--<script type="text/javascript" src="gui.js"></script>-->
 <link rel="stylesheet" type="text/css" href="style.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#menu-toggler').click(function() {
+		$('#menu').toggleClass('active');
+	});
+});
+</script>
 </head>
 <body>
 <div id="content">
 	<div class="row">
 		<h1 class="f1 middle-centered">TourCars</h1>
+	</div>
+	<a href="#" id="menu-toggler"><img src="toggler.png" alt="Toggle menu" title="Toggle menu" /></a>
+	<div class="row" id="menu">
+		<ul>
+			<li class="first"><a href="index.html">Home</a></li>
+			<li><a href="rent.html">Rent a car</a></li>
+			<li><a href="tour.html">Join a tour</a></li>
+			<li><a href="destinations.html">Destinations</a></li>
+			<li><a href="contact.html">Contact us</a></li>
+		</ul>
 	</div>
 	<div class="row">
 		<h2 class="f2 fixed">MasterCard</h2>
@@ -52,9 +70,9 @@
 	<div class="row">
 		<div class="f1 box">
 			<ul class="inline">
-				<li class="first"><a href="faq.html">FAQ</a></li>
+				<li class="first"><a href="#">FAQ</a></li>
 				<li><a href="contact.html">Contact</a></li>
-				<li><a href="conditions.html">General Conditions</a></li>
+				<li><a href="#">General Conditions</a></li>
 			</ul>
 			<p>&copy; CarTours gmbH - 2017</p>
 		</div>

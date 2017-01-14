@@ -11,22 +11,20 @@
 <link rel="stylesheet" href="slippry.css" />
 <script type="text/javascript">
 $(document).ready(function(){
-  $('#slider-1').slippry({
-  	pager: false,
-  	auto: false,
-  	transition: 'horizontal'
-  });
-});
-
-$(document).ready(function(){
-  $('#slider-2').slippry({
-  	pager: false,
-  	auto: false,
-  	transition: 'horizontal'
-  });
-});
-$(document).ready(function(){
-  $('.datepicker').datepicker();
+	$('#slider-1').slippry({
+		pager: false,
+ 		auto: false,
+		transition: 'horizontal'
+	});
+	$('#slider-2').slippry({
+		pager: false,
+		auto: false,
+		transition: 'horizontal'
+	});
+	$('.datepicker').datepicker();
+	$('#menu-toggler').click(function() {
+		$('#menu').toggleClass('active');
+	});
 });
 </script>
 </head>
@@ -34,6 +32,16 @@ $(document).ready(function(){
 <div id="content">
 	<div class="row">
 		<h1 class="f1 middle-centered">TourCars</h1>
+	</div>
+	<a href="#" id="menu-toggler"><img src="toggler.png" alt="Toggle menu" title="Toggle menu" /></a>
+	<div class="row" id="menu">
+		<ul>
+			<li class="first"><a href="index.html">Home</a></li>
+			<li><a href="rent.html">Rent a car</a></li>
+			<li><a href="tour.html">Join a tour</a></li>
+			<li><a href="destinations.html">Destinations</a></li>
+			<li><a href="contact.html">Contact us</a></li>
+		</ul>
 	</div>
 	<div class="row">
 		<h2 class="f1">Join a tour</h2>
@@ -277,9 +285,9 @@ $(document).ready(function(){
 	<div class="row">
 		<div class="f1 box">
 			<ul class="inline">
-				<li class="first"><a href="faq.html">FAQ</a></li>
+				<li class="first"><a href="#">FAQ</a></li>
 				<li><a href="contact.html">Contact</a></li>
-				<li><a href="conditions.html">General Conditions</a></li>
+				<li><a href="#">General Conditions</a></li>
 			</ul>
 			<p>&copy; CarTours gmbH - 2017</p>
 		</div>
