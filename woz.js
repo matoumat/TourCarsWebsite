@@ -94,37 +94,36 @@ function createDB() {
 var dbname = "hci1";
 var dburl = "http://127.0.0.1:5984/" + dbname + "/";
 var handlers = {
-	"animal" : setAnimal,
-	"counter" : stepCounter,
-	"showCounter" : showCounter,
-	"mytext" : mytext,
+	"innerText" : setInnerText,
+	"valueAttribute" : setValueAttribute,
+	"page" : setPage,
+	"popup" : setPopup
 	// add further handlers here
 };
 
-function setAnimal(response) {
-	var src = getCheckedRadio("animalImage");
-	var width = parseInt(document.getElementById("animalWidth").value);
+function setInnerText(response) {
+	var elid = document.getElementById("elidIT").value;
+	var value = document.getElementById("valueIT").value;
 	// console.log(src);
 	// console.log(width);
-	put(response, {"src" : src, "width" : width});
-}
-
-function stepCounter(response) {
-	var value = response.value ? response.value : 0;
-	// console.log(value);
-	put(response, {"value" : value + 1});
-}
-
-function showCounter(response) {
-	var checked = document.getElementById("showCounter").checked;
-	// console.log(checked);
-	put(response, {"checked" : checked});
-}
-
-function mytext(response) {
-	var value = document.getElementById("mytext").value;
-	// console.log(value);
-	put(response, {"value" : value});
+	put(response, {"elid" : elid, "value" : value});
 }
 
 
+function setValueAttribute(response) {
+	var elid = document.getElementById("elidVA").value;
+	var value = document.getElementById("valueVA").value;
+	// console.log(src);
+	// console.log(width);
+	put(response, {"elid" : elid, "value" : value});
+}
+
+function setPage(response) {
+	var value = document.getElementById("page").value;
+	put(response, {"value" : value, "received" : false});
+}
+
+function setPopup(response) {
+	var value = document.getElementById("popup").value;
+	put(response, {"value" : value, "received" : false});
+}
