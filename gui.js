@@ -78,7 +78,7 @@ var intervalID = setInterval(update, 200);
 // your code below
 
 var dbname = "hci1";
-var dburl = "http://192.168.0.7:5984/" + dbname + "/";
+var dburl = "http://127.0.0.1:5984/" + dbname + "/";
 var handlers = {
 	"innerText" : updateInnerText,
 	"valueAttribute" : updateValueAttribute,
