@@ -23,6 +23,9 @@ $(document).ready(function(){
 		console.log('happened');
 		$('#ui-datepicker-div').css('z-index',99);
 	});
+	$('input#next-button').click(function() {
+		$(location).attr('href', $('input[name=payment-method]:checked').attr('id')+".html");
+	});
 });
 </script>
 </head>

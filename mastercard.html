@@ -9,6 +9,9 @@ $(document).ready(function(){
 	$('#menu-toggler').click(function() {
 		$('#menu').toggleClass('active');
 	});
+	$('input#confirm-button').click(function() {
+		$(location).attr('href', "confirmation"+".html");
+	});
 });
 </script>
 </head>
@@ -61,7 +64,7 @@ $(document).ready(function(){
 			</div>
 			<div class="row">
 				<div class="f1 fixed">
-					<input type="button" value="Confirm" style="float: right; width: 10em;" />
+					<input type="button" id="confirm-button" value="Confirm" style="float: right; width: 10em;" />
 				</div>
 			</div>
 		</div>
