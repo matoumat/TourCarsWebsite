@@ -85,7 +85,7 @@ a {
 
 .box a.strong {
 	display: inline-block;
-	font-size: 6vw;
+	font-size: 3vw;
 	text-transform: uppercase;
 	text-align: center;
 	margin: 0 0 0.3em 0;
@@ -189,6 +189,13 @@ a.more {
 		border-top: 1px solid #000;
 		border-bottom: 1px solid #000;
 		margin-left: 0.5em;
+		background: none;
+	}
+
+
+	#menu ul li:hover {
+		background-image: radial-gradient(ellipse closest-side, #f1f1f1, rgba(0,0,0,0));
+		background-size: 100% 200%;
 	}
 
 	#menu ul li.first{
